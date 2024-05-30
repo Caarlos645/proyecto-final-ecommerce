@@ -21,7 +21,7 @@ import com.proyecto.ecommerce.backend.infraestructure.jwt.JWTGenerator;
 
 @RestController
 @RequestMapping("/api/v1/security")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://proyecto-final-ecommerce-production.up.railway.app")
 public class LoginController {
 	private final AuthenticationManager authenticationManager;
 	private final JWTGenerator jwtGenerator;

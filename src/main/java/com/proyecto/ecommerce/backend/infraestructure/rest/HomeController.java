@@ -12,7 +12,7 @@ import com.proyecto.ecommerce.backend.domain.model.Product;
 
 @RestController
 @RequestMapping("/api/v1/home")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://proyecto-final-ecommerce-production.up.railway.app")
 public class HomeController {
 	private final ProductService productService;
 

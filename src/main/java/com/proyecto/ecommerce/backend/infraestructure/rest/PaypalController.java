@@ -21,7 +21,7 @@ import lombok.AllArgsConstructor;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/payments")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://proyecto-final-ecommerce-production.up.railway.app")
 public class PaypalController {
 	private final PaypalService paypalService;
 	private final String SUCCESS_URL = "http://localhost:8080/api/v1/payments/success";

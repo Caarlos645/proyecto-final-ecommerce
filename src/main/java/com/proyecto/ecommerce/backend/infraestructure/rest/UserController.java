@@ -17,7 +17,7 @@ import com.proyecto.ecommerce.backend.domain.model.User;
 
 @RestController
 @RequestMapping("/api/v1/users")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://proyecto-final-ecommerce-production.up.railway.app")
 public class UserController {
 
 	private final UserService userService;
