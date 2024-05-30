@@ -99,6 +99,18 @@
 
 	<build>
 		<plugins>
+			  <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <mainClass>com.proyecto.ecommerce.backend.BackendApplication</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
 			<plugin>
 				<!--Añadido!-->
 				<groupId>org.apache.maven.plugins</groupId>
