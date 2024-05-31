@@ -59,7 +59,7 @@ public class PaypalController {
 	        try {
 	            Payment payment = paypalService.executePayment(paymentId, payerId);
 	            if (payment.getState().equals("approved")){
-	                return new RedirectView("https://proyecto-final-ecommerce-production.up.railway.app/payment/success");
+	                return new RedirectView("https://proyecto-final-ecommerce-production.up.railway.app/api/v1/payments/success");
 	                //return new RedirectView("http://localhost:4200");
 	            }
 	        } catch (PayPalRESTException e) {
