@@ -24,8 +24,8 @@ import lombok.AllArgsConstructor;
 @CrossOrigin(origins = "https://proyecto-final-ecommerce-production.up.railway.app")
 public class PaypalController {
 	private final PaypalService paypalService;
-	private final String SUCCESS_URL = "https://proyecto-final-ecommerce-production.up.railway.app/payment/success";
-	private final String CANCEL_URL = "https://proyecto-final-ecommerce-production.up.railway.app/payment/cancel";
+	private final String SUCCESS_URL = "https://proyecto-final-ecommerce-production.up.railway.app/api/v1/payments/success";
+	private final String CANCEL_URL = "https://proyecto-final-ecommerce-production.up.railway.app/api/v1/payments/cancel";
 	
 	 @PostMapping
 	    public URLPaypalResponse createPayment(@RequestBody DataPayment dataPayment){
