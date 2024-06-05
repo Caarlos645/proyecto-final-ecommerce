@@ -24,8 +24,8 @@ import lombok.AllArgsConstructor;
 @CrossOrigin(origins = "https://proyecto-final-ecommerce-production.up.railway.app")
 public class PaypalController {
 	private final PaypalService paypalService;
-	private final String SUCCESS_URL = "https://proyecto-final-ecommerce-production.up.railway.app/api/v1/payments/success";
-	private final String CANCEL_URL = "https://proyecto-final-ecommerce-production.up.railway.app/api/v1/payments/cancel";
+	private final String SUCCESS_URL = "https://proyecto-final-ecommerce-production.up.railway.app/payment/success";
+	private final String CANCEL_URL = "https://proyecto-final-ecommerce-production.up.railway.app/payment/cancel";
 	
 	 @PostMapping
 	    public URLPaypalResponse createPayment(@RequestBody DataPayment dataPayment){
@@ -59,7 +59,7 @@ public class PaypalController {
 	        try {
 	            Payment payment = paypalService.executePayment(paymentId, payerId);
 	            if (payment.getState().equals("approved")){
-	                return new RedirectView("https://proyecto-final-ecommerce-production.up.railway.app/api/v1/payments/success");
+	                return new RedirectView("https://proyecto-final-ecommerce-production.up.railway.app/payment/success");
 	                //return new RedirectView("http://localhost:4200");
 	            }
 	        } catch (PayPalRESTException e) {
